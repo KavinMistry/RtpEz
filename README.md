@@ -1,7 +1,9 @@
 # RtpEz: 
 This is a simple and efficent random teleport plugin, with options for range, cooldown, countdown and much more ! 
 
-If you find any bugs please email me at : minekavincraft@gmail.com, I will fix them asap !
+If you find any bugs please email me at: minekavincraft@gmail.com, I will fix them asap !
+
+link to modrinth page for the plugin: https://modrinth.com/plugin/rtpez
 
 ## Guide: 
 
