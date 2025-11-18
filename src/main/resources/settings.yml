@@ -1,0 +1,50 @@
+
+#Edit this to change the maximum times the plugin tries to search for a safe spot before showing the error "No suitable location found" and stopping search.
+#The higher you keep this number, the greater the load on the server!
+#Do not change if you are unsure of how strong your server is!
+Depth: 5
+
+#Edit this and enter the name of the world you want to disable rtp in
+#Put "-" Followed by the exact world name to add a world just like the example
+DisabledWorlds:
+  - example_world_name
+
+#Put the blocks that you don't want the player to rtp on
+DisabledBlocks:
+  - LAVA
+  - BEDROCK
+
+#Number of seconds it counts down before teleporting
+CountdownTime: 3
+
+#If true, it will cancel the teleport if player moves during countdown
+#If false, it will allow the player to move during countdown
+MoveCancel: true
+
+#SoundEffects
+OnTeleport: true
+TeleportCountdown: true
+
+#Chat and title message strings
+rtpDisabledWorld: "Rtp is §4disabled §rin this world, Edit the §3RtpEz/settings.yml §rin plugins folder to change this!"
+rtpDisabledAdminWorld: "Rtp is disabled in this world!"
+rtpCooldown1: "Rtp is currently in §4cooldown§r! §3"
+rtpCooldown2: " §rSeconds left"
+teleportingTitle: "Teleporting in : §3"
+movedTitle: "§4You Moved!"
+teleportedTitle: "§3Teleported!"
+noSafeLocation: "§4No safe location found!"
+nonPlayerSender: "This command can only be run by players!"
+invalidPlayer: "Player is either §4offline §ror §4does not exist"
+
+#All other worlds will inherit this default world's parameters if they don't have their own settings
+world:
+  #Edit this to change the range of rtp
+  Range:
+    #Start is the lowest x or z value that rtp will send players to
+    #End is the largest x or z value that rtp will send players to
+    Start: 500
+    End: 1500
+  #Edit this to change the cooldown of the rtp command in milliseconds
+  Cooldown: 60000
+#To change the settings for a specific world just copy the entire world section above and change its name to that world and then change its settings

@@ -1,0 +1,17 @@
+name: RtpEzBackwards
+version: '0.0.1'
+main: kavin.mistry.rtpEz2.RtpEz2
+api-version: '1.20'
+commands:
+  rtp:
+    description: "This will randomly teleport you"
+    usage: "/rtp"
+    aliases: [rtpez]
+    permission: rtpez.command.rtp
+    permission-message: "You do not have the required permission to run this command"
+permissions:
+  rtpez.command.rtp:
+    default: true
+
+  rtpez.command.admin:
+    default: op
