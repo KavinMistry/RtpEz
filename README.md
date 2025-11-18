@@ -3,17 +3,7 @@ This is a simple and efficent random teleport plugin, with options for range, co
 
 If you find any bugs please email me at : minekavincraft@gmail.com, I will fix them asap !
 
-
-### Check Out My Work:
-New Mage PvP server : https://youtu.be/wgb2LsFLwA4?si=DmEX_Yz-ImARcHaM
-
 ## Guide: 
-| Version 2.x                        | Version 0.x & 1.x             |
-|--------------------------------- |-----------------------|
-| All options controlled through settings.yml | Commands for most options |
-| Smaller file size                 | Bigger file size              |
-| Light-Weight plugin                   | Heavier plugin       |
-
 
 ### Commands:
 
