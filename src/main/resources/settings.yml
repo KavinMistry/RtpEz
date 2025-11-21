@@ -25,6 +25,9 @@ MoveCancel: true
 OnTeleport: true
 TeleportCountdown: true
 
+TeleportSound: "BLOCK_BEACON_POWER_SELECT"
+TeleportCountdownSound: "ENTITY_ARROW_HIT_PLAYER"
+
 #Chat and title message strings
 rtpDisabledWorld: "Rtp is §4disabled §rin this world, Edit the §3RtpEz/settings.yml §rin plugins folder to change this!"
 rtpDisabledAdminWorld: "Rtp is disabled in this world!"

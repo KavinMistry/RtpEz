@@ -19,8 +19,12 @@ public class rtpSettings
     private List<String> DisabledBlocks;
     private int CountdownTime;
     private boolean MoveCancel;
+
     private boolean OnTeleport;
     private boolean TeleportCountdown;
+    private String TeleportSound;
+    private String TeleportCountdownSound;
+
     private String rtpDisabledWorld, rtpDisabledAdminWorld, rtpCooldown1, rtpCooldown2, teleportingTitle, movedTitle, teleportedTitle, noSafeLocation, nonPlayerSender, invalidPlayer;
 
     private rtpSettings() {
@@ -49,6 +53,9 @@ public class rtpSettings
         TeleportCountdown = config.getBoolean("TeleportCountdown");
         DisabledBlocks = new ArrayList<>(config.getStringList("DisabledBlocks"));
 
+        TeleportSound = config.getString("TeleportSound");
+        TeleportCountdownSound = config.getString("TeleportCountdownSound");
+
         rtpDisabledWorld = config.getString("rtpDisabledWorld");
         rtpDisabledAdminWorld = config.getString("rtpDisabledAdminWorld");
         rtpCooldown1 = config.getString("rtpCooldown1");
@@ -59,6 +66,16 @@ public class rtpSettings
         noSafeLocation = config.getString("noSafeLocation");
         nonPlayerSender = config.getString("nonPlayerSender");
         invalidPlayer = config.getString("invalidPlayer");
+    }
+
+    public String TeleportCountdownSound()
+    {
+        return TeleportCountdownSound;
+    }
+
+    public String TeleportSound()
+    {
+        return TeleportSound;
     }
 
     public String invalidPlayer()
@@ -176,6 +193,8 @@ public class rtpSettings
     {
         return OnTeleport;
     }
+
+
 
     public boolean getSoundCount()
     {

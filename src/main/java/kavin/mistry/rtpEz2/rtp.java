@@ -1,9 +1,6 @@
 package kavin.mistry.rtpEz2;
 
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Sound;
-import org.bukkit.World;
+import org.bukkit.*;
 import org.bukkit.block.Biome;
 import org.bukkit.block.Block;
 import org.bukkit.command.Command;
@@ -18,8 +15,8 @@ import org.jetbrains.annotations.Nullable;
 import java.time.Instant;
 import java.util.*;
 
-public class rtp implements TabExecutor, CommandExecutor {
-
+public class rtp implements TabExecutor, CommandExecutor
+{
     public Map<UUID, Instant> time = new HashMap<>();
     int cool;
 
@@ -76,7 +73,8 @@ public class rtp implements TabExecutor, CommandExecutor {
                     player.sendTitle(rtpSettings.getInstance().teleportingTitle() + secondsLeft, null,0 ,30, 0);
                     if(onCount)
                     {
-                        player.playSound(player , Sound.ENTITY_ARROW_HIT_PLAYER, 3f, 2f);
+                        String string = rtpSettings.getInstance().TeleportCountdownSound();
+                        player.playSound(player , Sound.valueOf(string), 3f, 2f);
                     }
                     secondsLeft--;
                 }
@@ -113,7 +111,8 @@ public class rtp implements TabExecutor, CommandExecutor {
                 boolean onTeleport = rtpSettings.getInstance().getSoundTeleport();
                 if(onTeleport)
                 {
-                    player.playSound(player , Sound.BLOCK_BEACON_POWER_SELECT, 3f, 2f);
+                    String string = rtpSettings.getInstance().TeleportSound();
+                    player.playSound(player , Sound.valueOf(string), 3f, 2f);
                 }
                 return loc;
             }
